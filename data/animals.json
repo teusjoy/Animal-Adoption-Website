@@ -1,0 +1,67 @@
+[
+    {
+      "name": "Buddy",
+      "species": "Dog",
+      "age": 2,
+      "description": "Buddy is a friendly and energetic dog. He loves to play fetch and go on long walks. He is great with children and other pets.",
+      "image": "images/dog1.jpg"
+    },
+    {
+      "name": "Whiskers",
+      "species": "Cat",
+      "age": 1,
+      "description": "Whiskers is a playful and curious cat. She gets along well with other cats.",
+      "image": "images/cat1.jpg"
+    },
+    {
+      "name": "Hopper",
+      "species": "Rabbit",
+      "age": 1.5,
+      "description": "Hopper is a sweet and gentle rabbit. He loves nibbling on fresh vegetables.",
+      "image": "images/rabbit1.jpg"
+    },
+    {
+      "name": "Sunny",
+      "species": "Parrot",
+      "age": 3,
+      "description": "Sunny is a colorful parrot with a vibrant personality. A playful companion for any bird lover.",
+      "image": "images/parrot1.jpg"
+    },
+    {
+      "name": "Nemo",
+      "species": "Fish",
+      "age": 1,
+      "description": "Nemo is a beautiful tropical fish with vibrant colors.He adds splash of color to any fish tank.",
+      "image": "images/fish1.jpg"
+    },
+    {
+      "name": "Mittens",
+      "species": "Guinea Pig",
+      "age": 1.5,
+      "description": "Mittens is an adorable guinea pig with a soft coat. A perfect small pet for any home.",
+      "image": "images/guineapig1.jpg"
+    },
+    {
+      "name": "Foreign Duck",
+      "species": "Duck",
+      "age": 4,
+      "description": "Foreign Duck perfect for any home.",
+      "image": "images/duck1.jpg"
+    },
+    {
+      "name": "Lumalee",
+      "species": "GLumalee",
+      "age": 3,
+      "description": "Lumalee enjoys munching, perfect for any home.",
+      "image": "images/lumalee1.jpg"
+    },
+    {
+      "name": "FredCyber",
+      "species": "Turtle",
+      "age": 2,
+      "description": "Please take this off our hands.",
+      "image": "images/turtle1.jpg"
+    }
+
+  ]
+  
