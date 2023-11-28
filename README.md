@@ -1,7 +1,7 @@
 # Animal-Adoption-Website
 This is an animal adoption website built in HTML5, CSS3, and JavaScript.
 
-Website Structure: 
+# Website Structure: 
 
 ## Home Page: 
 - Welcome message and brief introduction to the organization.
