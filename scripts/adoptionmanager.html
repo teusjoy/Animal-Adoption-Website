@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+
+    <!-- HomePage CSS -->
+    <link href="styles/homepage.css" rel="stylesheet">
+    <link href="styles/homepage.css" rel="stylesheet">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+          integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" rel="stylesheet">
+
+
+</head>
+
+<body>
+<header>
+    <div>
+        <!--NAV BAR -->
+        <nav class="navbar navbar-expand-sm fixed-top custom-navbar">
+            <!--Use custom-navbar-brand ... to make changes!-->
+            <a class="navbar-brand" href="#">Assignment_3</a>
+            <button aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"
+                    class="navbar-toggler"
+                    data-bs-target="#collapsibleNavId"
+                    data-bs-toggle="collapse" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a aria-current="page" class="nav-link active" href="#div1">Adopt <span class="visually-hidden">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#div2">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#div3">Donate</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle"
+                           data-bs-toggle="dropdown"
+                           href="#" id="dropdownId" role="button">Find</a>
+                        <div aria-labelledby="dropdownId" class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Adoption</a>
+                            <a class="dropdown-item" href="#">Donation</a>
+                            <a class="dropdown-item" href="#">Volunteering</a>
+                            <a class="dropdown-item" href="#">Set appointment</a>
+                            <a class="dropdown-item" href="#">About Us</a>
+                        </div>
+                    </li>
+                </ul>
+                <form class="d-flex my-2 my-lg-0">
+                    <input class="form-control me-2" placeholder="Search" type="text">
+                    <!--use  .btn custom-btn-outline-success... to make your own!-->
+                    <button class="btn btn-outline-success" style="margin-right: 2%;"
+                            type="submit">
+                        Search
+                    </button>
+                </form>
+            </div>
+        </nav>
+
+    </div>
+</header>
+<main>
+    <div class="container mt-5">
+        <h2>Adopt a Pet</h2>
+        <div class="mb-3">
+            <label class="form-label" for="animalType">Type of Animal</label>
+            <select class="form-select" id="animalType" onchange="showAnimals(this.value)">
+                <option value="">All</option>
+                <!-- types of animals here -->
+            </select>
+        </div>
+        <div class="d-flex flex-wrap" id="animalsContainer">
+            <!-- Animal cards -->
+        </div>
+    </div>
+
+    <!-- Adoption Form Modal -->
+    <div class="modal" id="adoptionFormModal" role="dialog" tabindex="-1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Complete Adoption Form</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Step 1: Confirm Pet Selection -->
+                    <div id="step1">
+                        <h5>Selected Pet</h5>
+                        <p>Pet's Name: <span id="selectedPetName"></span></p>
+                        <p>Pet ID: <span id="selectedPetId"></span></p>
+                        <button class="btn btn-primary" onclick="goToStep2()">Next</button>
+                    </div>
+
+                    <!-- Step 2: Collect Adopter Information -->
+                    <div id="step2" style="display: none;">
+                        <form id="adopterInfoForm">
+                            <div class="mb-3">
+                                <label class="form-label" for="fullName">Full Name</label>
+                                <input class="form-control" id="fullName" required type="text">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="address">Address</label>
+                                <input class="form-control" id="address" required type="text">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="creditCardInfo">Credit Card Info</label>
+                                <input class="form-control" id="creditCardInfo" required type="text">
+                            </div>
+                            <button class="btn btn-primary" type="submit">Submit</button>
+                        </form>
+                    </div>
+
+                    <!-- Summary -->
+                    <div id="summary" style="display: none;">
+                        <!-- Summary details will be added by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<footer>
+    <div>
+        <p>© 2023 Animal Adoption Center</p>
+    </div>
+</footer>
+
+<!-- Bootstrap JavaScript Libraries -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous"></script>
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        fetch('data/animals.json')
+            .then(response => response.json())
+            .then(data => {
+                populateSpeciesDropdown(data);
+                showAnimals(data);
+            });
+        document.getElementById('animalType').addEventListener('change', function(event) {
+            fetch('data/animals.json')
+                .then(response => response.json())
+                .then(data => showAnimals(data, event.target.value));
+        });
+    });
+
+
+
+    function populateSpeciesDropdown(animals) {
+        const speciesSet = new Set(animals.map(animal => animal.species));
+        const speciesDropdown = document.getElementById('animalType');
+
+        speciesSet.forEach(species => {
+            const option = document.createElement('option');
+            option.value = species;
+            option.textContent = species;
+            speciesDropdown.appendChild(option);
+        });
+    }
+
+    function showAnimals(animals, selectedSpecies = '') {
+        const animalsContainer = document.getElementById('animalsContainer');
+        animalsContainer.innerHTML = '';
+
+        animals.forEach(animal => {
+            if (selectedSpecies === '' || animal.species.toLowerCase() === selectedSpecies.toLowerCase()) {
+                const imagePath = `images/animals/${animal.species.toLowerCase()}${animal.id}.jpg`;
+
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.style = 'width: 18rem; margin: 10px;';
+                card.innerHTML = `
+                <img src="${imagePath}" class="card-img-top" alt="${animal.name}" onerror="this.onerror=null; this.src='images/animals/default.jpg'">
+                <div class="card-body">
+                    <h5 class="card-title">${animal.name}</h5>
+                    <p class="card-text"><b>Species:</b> ${animal.species}</p>
+                    <p class="card-text"><b>Age:</b> ${animal.age} years</p>
+                    <p class="card-text"><b>Description:</b> ${animal.description}</p>
+                    <button class="btn btn-primary adopt-me-button" data-name="${animal.name}" data-id="${animal.id}">Adopt Me!</button>
+                </div>
+            `;
+                animalsContainer.appendChild(card);
+            }
+        });
+    }
+
+    function selectAnimal(name, id) {
+        // Set the selected animal's name and id in the modal
+        document.getElementById('selectedPetName').textContent = name;
+        document.getElementById('selectedPetId').textContent = id;
+
+        // Show the modal
+        var myModal = new bootstrap.Modal(document.getElementById('adoptionFormModal'));
+        myModal.show();
+
+        // Show the first step and hide others
+        document.getElementById('step1').style.display = 'block';
+        document.getElementById('step2').style.display = 'none';
+        document.getElementById('summary').style.display = 'none';
+    }
+
+    function goToStep2() {
+        // Show the second step
+        document.getElementById('step1').style.display = 'none';
+        document.getElementById('step2').style.display = 'block';
+    }
+
+    document.getElementById('animalsContainer').addEventListener('click', function(event) {
+        if (event.target.classList.contains('adopt-me-button')) {
+            const name = event.target.getAttribute('data-name');
+            const id = event.target.getAttribute('data-id');
+            selectAnimal(name, id);
+        }
+    });
+
+    document.getElementById('adopterInfoForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const fullName = document.getElementById('fullName').value;
+        const address = document.getElementById('address').value;
+        const creditCardInfo = document.getElementById('creditCardInfo').value;
+        const petName = document.getElementById('selectedPetName').textContent;
+        const petId = document.getElementById('selectedPetId').textContent;
+
+        document.getElementById('step2').style.display = 'none';
+        const summaryDiv = document.getElementById('summary');
+        summaryDiv.innerHTML = `
+        <h5>Adoption Summary</h5>
+        <p>Pet Name: ${petName}</p>
+        <p>Pet ID: ${petId}</p>
+        <p>Adopter's Name: ${fullName}</p>
+        <p>Address: ${address}</p>
+        <p>Credit Card Info: ${creditCardInfo}</p>
+    `;
+        summaryDiv.style.display = 'block';
+    });
+</script>
+<script crossorigin="anonymous"
+        integrity="sha256-/xUj+3OJU5yEx1q6GSYGSHk7tPXikynS7ogEvDej/m4="
+        src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script crossorigin="anonymous"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js">
+</script>
+<script crossorigin="anonymous"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js">
+</script>
+</body>
+
+</html>
