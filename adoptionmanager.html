@@ -74,9 +74,7 @@
         <div class="mb-3">
             <label class="form-label" for="animalType">Type of Animal</label>
             <select class="form-select" id="animalType" onchange="showAnimals(this.value)">
-                <option value="">Choose...</option>
-                <option value="cat">Cat</option>
-                <option value="dog">Dog</option>
+                <option value="">All</option>
                 <!-- types of animals here -->
             </select>
         </div>
@@ -147,51 +145,77 @@
         crossorigin="anonymous"></script>
 </script>
 <script>
-    function showAnimals(animalType) {
-        const animalsContainer = document.getElementById('animalsContainer');
-        animalsContainer.innerHTML = ''; // Clear previous animals
+    document.addEventListener('DOMContentLoaded', function() {
+        fetch('data/animals.json')
+            .then(response => response.json())
+            .then(data => {
+                populateSpeciesDropdown(data);
+                showAnimals(data);
+            });
+        document.getElementById('animalType').addEventListener('change', function(event) {
+            fetch('data/animals.json')
+                .then(response => response.json())
+                .then(data => showAnimals(data, event.target.value));
+        });
+    });
 
-        const animals = animalType === 'cat' ? [
-            {id: 'cat01', name: 'Whiskers'},
-            {id: 'cat02', name: 'Mittens'}
-            // TODO ADD MORE CATS
-        ] : []; // TODO ADD MORE ANIMALS TYPES
 
-        animals.forEach(animal => {
-            const card = document.createElement('div');
-            card.className = 'card';
-            card.style = 'width: 18rem; margin: 10px;';
-            card.innerHTML = `
-            <img src="${getImageUrlForAnimal(animal.id)}" onerror="this.onerror=null; this.src='images/animals/default.jpg'" class="card-img-top" alt="${animal.name}">
-            <div class="card-body">
-                <h5 class="card-title">${animal.name}</h5>
-                <p class="card-text">Some info about ${animal.name}</p>
-                <button class="btn btn-primary adopt-me-button" data-name="${animal.name}" data-id="${animal.id}">Adopt Me!</button>
-            </div>
-        `;
-            animalsContainer.appendChild(card);
+
+    function populateSpeciesDropdown(animals) {
+        const speciesSet = new Set(animals.map(animal => animal.species));
+        const speciesDropdown = document.getElementById('animalType');
+
+        speciesSet.forEach(species => {
+            const option = document.createElement('option');
+            option.value = species;
+            option.textContent = species;
+            speciesDropdown.appendChild(option);
         });
     }
 
-    function getImageUrlForAnimal(animalId) {
-        const basePath = 'images/animals/';
-        const defaultImage = 'default.jpg';
-        return basePath + animalId + '.jpg';
+    function showAnimals(animals, selectedSpecies = '') {
+        const animalsContainer = document.getElementById('animalsContainer');
+        animalsContainer.innerHTML = '';
+
+        animals.forEach(animal => {
+            if (selectedSpecies === '' || animal.species.toLowerCase() === selectedSpecies.toLowerCase()) {
+                const imagePath = `images/animals/${animal.species.toLowerCase()}${animal.id}.jpg`;
+
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.style = 'width: 18rem; margin: 10px;';
+                card.innerHTML = `
+                <img src="${imagePath}" class="card-img-top" alt="${animal.name}" onerror="this.onerror=null; this.src='images/animals/default.jpg'">
+                <div class="card-body">
+                    <h5 class="card-title">${animal.name}</h5>
+                    <p class="card-text"><b>Species:</b> ${animal.species}</p>
+                    <p class="card-text"><b>Age:</b> ${animal.age} years</p>
+                    <p class="card-text"><b>Description:</b> ${animal.description}</p>
+                    <button class="btn btn-primary adopt-me-button" data-name="${animal.name}" data-id="${animal.id}">Adopt Me!</button>
+                </div>
+            `;
+                animalsContainer.appendChild(card);
+            }
+        });
     }
 
     function selectAnimal(name, id) {
+        // Set the selected animal's name and id in the modal
         document.getElementById('selectedPetName').textContent = name;
         document.getElementById('selectedPetId').textContent = id;
 
+        // Show the modal
         var myModal = new bootstrap.Modal(document.getElementById('adoptionFormModal'));
         myModal.show();
 
+        // Show the first step and hide others
         document.getElementById('step1').style.display = 'block';
         document.getElementById('step2').style.display = 'none';
         document.getElementById('summary').style.display = 'none';
     }
 
     function goToStep2() {
+        // Show the second step
         document.getElementById('step1').style.display = 'none';
         document.getElementById('step2').style.display = 'block';
     }
