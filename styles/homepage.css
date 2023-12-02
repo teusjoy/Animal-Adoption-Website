@@ -1,29 +1,10 @@
 @import url("universal.css");
-/*
-* NAV BAR Styling
-*/
-.custom-navbar {
-    background-color: var(--white1);
-    height: var(--navbar-height); 
-}
-
-.custom-navbar-brand{
-    /*
-    *create a custom brand (where there currently is Assigment_3)
-   */
-}
-
-.btn custom-btn-outline-success{
-    /*
-    *create a custom btn
-   */
-}
 
 /*
 * Carousel Styling
 */
 #featured-animals{
-    background-color:lightgrey;
+    background-color:var(--white1);
     padding-top: var(--navbar-height);
 }
 
@@ -36,6 +17,7 @@
 .col{
     width: 15vw;
 }
+
 .card {
     margin: 1vw;
   }
@@ -49,8 +31,7 @@
   
 .card-img-top {
     height: 40vh;
-    object-fit:cover; 
-    border-radius: 80px;
+    object-fit:cover;
 }
 
 #div1{
@@ -136,44 +117,3 @@ footer{
     }
 }
 
-/* Media query for nav bar collapse
-*  NAV BAR STYLING 
-*/
-@media (max-width: 580px) {
-
-    .navbar-collapse {
-        display: flex;
-        flex-direction:column;
-        background-color: var(--white1); 
-    }
-
-     /* Puts the search bar at the top, when hamburger is clicked*/
-    .navbar-collapse form {
-        width: 95%;
-        order: -1;
-      }
-
-    .navbar-collapse ul{
-        width: 100%;
-    }
-    .navbar-nav .nav-item{
-        text-align: center;
-        justify-content: center;
-    }
-    .navbar-nav .dropdown-toggle{
-        background-color: var(--yellow1);
-    }
-
-    .dropdown-menu .dropdown-item {
-        display: inline-flex;
-        margin: 0 auto;
-        width:fit-content;
-        padding: 3vh 3vh 3vh 3vh;
-        background-color: var(--white1);
-        border: 1px solid var(--brown1);
-        color: var(--brown1);
-        border-radius: 60px;
-        margin: 0.3rem;
-    }
-        
-}
