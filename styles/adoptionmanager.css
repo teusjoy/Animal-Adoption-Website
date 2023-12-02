@@ -13,3 +13,18 @@
     *create a custom btn
    */
 }
+
+.card {
+    padding-bottom: 20px;
+}
+
+.container {
+    padding: 35px;
+}
+
+.adopt-me-button {
+    position : absolute;
+    left: 10px;
+    bottom: 0px;
+
+}
