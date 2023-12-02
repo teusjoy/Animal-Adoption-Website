@@ -4,63 +4,72 @@
       "species": "Dog",
       "age": 2,
       "description": "Buddy is a friendly and energetic dog. He loves to play fetch and go on long walks. He is great with children and other pets.",
-      "image": "images/dog1.jpg"
+      "image": "images/dog1.jpg",
+      "id": "1"
     },
     {
       "name": "Whiskers",
       "species": "Cat",
       "age": 1,
       "description": "Whiskers is a playful and curious cat. She gets along well with other cats.",
-      "image": "images/cat1.jpg"
+      "image": "images/cat1.jpg",
+      "id": "2"
     },
     {
       "name": "Hopper",
       "species": "Rabbit",
       "age": 1.5,
       "description": "Hopper is a sweet and gentle rabbit. He loves nibbling on fresh vegetables.",
-      "image": "images/rabbit1.jpg"
+      "image": "images/rabbit1.jpg",
+      "id": "3"
     },
     {
       "name": "Sunny",
       "species": "Parrot",
       "age": 3,
       "description": "Sunny is a colorful parrot with a vibrant personality. A playful companion for any bird lover.",
-      "image": "images/parrot1.jpg"
+      "image": "images/parrot1.jpg",
+      "id": "4"
     },
     {
       "name": "Nemo",
       "species": "Fish",
       "age": 1,
       "description": "Nemo is a beautiful tropical fish with vibrant colors.He adds splash of color to any fish tank.",
-      "image": "images/fish1.jpg"
+      "image": "images/fish1.jpg",
+      "id": "5"
     },
     {
       "name": "Mittens",
       "species": "Guinea Pig",
       "age": 1.5,
       "description": "Mittens is an adorable guinea pig with a soft coat. A perfect small pet for any home.",
-      "image": "images/guineapig1.jpg"
+      "image": "images/guineapig1.jpg",
+      "id": "6"
     },
     {
       "name": "Foreign Duck",
       "species": "Duck",
       "age": 4,
       "description": "Foreign Duck perfect for any home.",
-      "image": "images/duck1.jpg"
+      "image": "images/duck1.jpg",
+      "id": "7"
     },
     {
       "name": "Lumalee",
       "species": "GLumalee",
       "age": 3,
       "description": "Lumalee enjoys munching, perfect for any home.",
-      "image": "images/lumalee1.jpg"
+      "image": "images/lumalee1.jpg",
+      "id": "8"
     },
     {
       "name": "FredCyber",
       "species": "Turtle",
       "age": 2,
       "description": "Please take this off our hands.",
-      "image": "images/turtle1.jpg"
+      "image": "images/turtle1.jpg",
+      "id": "9"
     }
 
   ]
