@@ -1,8 +1,75 @@
 :root {
+  /*NAV BAR HEIGHT*/
     --navbar-height: 56px; 
+
+  /* use better variables names, like: paragraph text, animal name... etc*/
     --green1: #9dffb0; /* (157, 255, 176) */
     --blue1: #81f1f7; /* (129, 241, 247) */
     --white1: #fffffa; /* (255, 255, 250) */
     --brown1: #c48d3f; /* (196, 141, 63) */
     --yellow1: #fff563; /* (255, 245, 99) */
   }
+
+/*
+* NAV BAR Styling
+*/
+.custom-navbar {
+  background-color: var(--white1);
+  height: var(--navbar-height); 
+}
+
+.custom-navbar-brand{
+  /*
+  *create a custom brand (where there currently is Assigment_3)
+ */
+}
+
+.btn custom-btn-outline-success{
+  /*
+  *create a custom btn
+ */
+}
+
+
+
+/* Media query for nav bar collapse
+*  NAV BAR STYLING 
+*/
+@media (max-width: 580px) {
+
+  .navbar-collapse {
+      display: flex;
+      flex-direction:column;
+      background-color: var(--white1); 
+  }
+
+   /* Puts the search bar at the top, when hamburger is clicked*/
+  .navbar-collapse form {
+      width: 95%;
+      order: -1;
+    }
+
+  .navbar-collapse ul{
+      width: 100%;
+  }
+  .navbar-nav .nav-item{
+      text-align: center;
+      justify-content: center;
+  }
+  .navbar-nav .dropdown-toggle{
+      background-color: var(--yellow1);
+  }
+
+  .dropdown-menu .dropdown-item {
+      display: inline-flex;
+      margin: 0 auto;
+      width:fit-content;
+      padding: 3vh 3vh 3vh 3vh;
+      background-color: var(--white1);
+      border: 1px solid var(--brown1);
+      color: var(--brown1);
+      border-radius: 60px;
+      margin: 0.3rem;
+  }
+      
+}
