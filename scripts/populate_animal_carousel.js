@@ -49,7 +49,7 @@ function createCard(targetID, integer){
   
     // Create card 
     var card = document.createElement("div");
-    card.classList.add("card");
+    card.classList.add("card","border-0");
     card.id = "animalCard"+integer;
   
     // Card image
@@ -78,6 +78,8 @@ function createCard(targetID, integer){
     card.appendChild(img);
     card.appendChild(cardBody);
     cardColumn.appendChild(card);
+
+    
   
     // Add to target container
     targetContainer.appendChild(cardColumn);
