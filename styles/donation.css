@@ -1,0 +1,70 @@
+body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.donation-section {
+    background-size: cover;
+    padding: 50px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.donation-text {
+    max-width: 40%;
+}
+
+.donation-form {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.tier-selection {
+    margin-bottom: 20px;
+}
+
+.tier {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.tier img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.tier-button {
+    padding: 10px 20px;
+    border: 2px solid transparent;
+}
+
+.tier-button.active {
+    border-color: #007bff;
+    background-color: #e7f5ff;
+}
+
+.other input {
+    width: 100%;
+    margin-top: 10px;
+}
+
+#paymentMethod {
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .donation-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .donation-text, .donation-form {
+        max-width: 100%;
+    }
+}
