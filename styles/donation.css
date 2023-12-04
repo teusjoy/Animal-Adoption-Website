@@ -1,45 +1,74 @@
+html {
+    height: 100%;
+    margin: 0;
+}
+
 body {
     padding-top: 20px;
     padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    margin: 0; 
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .donation-section {
     background-size: cover;
-    padding: 50px;
-    color: white;
+    padding: 30px;
+    color: rgb(0, 0, 0);
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    
 }
 
+
 .donation-text {
-    max-width: 40%;
+    max-width: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    margin-right: 15px;
 }
 
 .donation-form {
     background: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
+    padding: 5px;
+    border-radius: 20px;
 }
 
 .tier-selection {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .tier {
     display: flex;
     align-items: center;
+    justify-content: center;
     margin-bottom: 15px;
+    padding: 5px;
 }
 
 .tier img {
-    width: 50px;
-    margin-right: 10px;
+    width: 150px;
+    margin-right: 30px;
+    border: 4px solid black;
+    border-radius: 30px;
 }
 
 .tier-button {
-    padding: 10px 20px;
-    border: 2px solid transparent;
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    border-radius: 40px;
+    min-width: 100px;
+    border: 4px solid black;
 }
 
 .tier-button.active {
@@ -48,23 +77,83 @@ body {
 }
 
 .other input {
-    width: 100%;
+    width: 30%;
     margin-top: 10px;
+    margin-left: 10px;
 }
 
 #paymentMethod {
     margin-bottom: 20px;
-    width: 100%;
+    margin-left: 50px;
+    width: 70%;
     padding: 10px;
 }
 
+
+.donation-text h1,
+.donation-text h2,
+.donation-form {
+    font-family: 'Luckiest Guy', cursive; 
+    color: #ffffff; 
+    text-transform: uppercase; 
+    
+}
+
+.donation-text h1 {
+    font-size: 3rem; 
+}
+
+.donation-text h2 {
+    font-size: 2rem; 
+}
+
+
+#otherAmount { 
+    color: #000000; 
+    font-size: 1.2rem; 
+}
+
+#otherAmountLabel {
+    color: #ffffff; 
+    font-size: 1.5rem;
+}
+
+#donateButton {
+    color: #000000; 
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    border-radius: 40px;
+    min-width: 100px;
+    border: 4px solid black;
+}
+
 @media (max-width: 768px) {
+    .tier img {
+        width: 75px; 
+        margin-right: 15px;
+    }
+
+    .donation-text h1 {
+        font-size: 1.5rem; 
+    }
+
+    .donation-text h2 {
+        font-size: 1rem; 
+    }
+
+    
     .donation-section {
         flex-direction: column;
         text-align: center;
+        align-items: center;
+        justify-content: center;
     }
 
     .donation-text, .donation-form {
-        max-width: 100%;
+        max-width: 80%;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
     }
 }

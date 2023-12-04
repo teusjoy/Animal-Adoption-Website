@@ -2,17 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donate to Animal Adoption Center</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Give a treat! Donate to the Animal Adoption Center!</title>
+    <link href="styles/homepage.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/donation.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div>
-            <!--NAV BAR -->
+            
             <nav class="navbar navbar-expand-sm fixed-top custom-navbar">
-                <!--Use custom-navbar-brand ... to make changes!-->
+                
                 <a class="navbar-brand" href="#">Assignment_3</a>
                 <button aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"
                         class="navbar-toggler"
@@ -46,7 +48,7 @@
                     </ul>
                     <form class="d-flex my-2 my-lg-0">
                         <input class="form-control me-2" placeholder="Search" type="text">
-                        <!--use  .btn custom-btn-outline-success... to make your own!-->
+                        
                         <button class="btn btn-outline-success" style="margin-right: 2%;"
                                 type="submit">
                             Search
@@ -59,36 +61,62 @@
     </header>
     
     <main class="container my-5">
-        <div class="donation-section" style="background-image: url('path/to/background-image.jpg');">
+        <div class="donation-section" style="background-image: url('images/donations/Background_donation.png');">
             <div class="donation-text">
-                <h2>Make a Donation</h2>
-                <p>Your generosity helps us save more animals...</p>
+                <h1>Give a treat! Make a donation today</h1>
+                <h2>Your generosity helps us feed more good bois, and these ones eat a lot!</h2>
             </div>
 
             <div class="donation-form">
                 <form id="donationForm">
+                    <h1 style="text-align: center;">Treat selection!</h1>
+
                     <div class="tier-selection">
                         <div class="tier" data-amount="5">
-                            <img src="path/to/image-for-5.jpg" alt="$5 donation">
-                            <button type="button" class="tier-button">$5</button>
+                            <img src="images/donations/snack1.jpg" alt="$5 donation">
+                            <button type="button" class="tier-button" data-amount="5">$5 </button>
                         </div>
-                        <!-- Repeat for other tiers -->
-                        <div class="tier other">
-                            <input type="number" id="otherAmount" placeholder="Other Amount">
+                        <div class="tier" data-amount="10">
+                            <img src="images/donations/snack2.jpg" alt="$10 donation">
+                            <button type="button" class="tier-button" data-amount="10">$10</button>
+                        </div>
+                        <div class="tier" data-amount="20">
+                            <img src="images/donations/snack3.jpg" alt="$20 donation">
+                            <button type="button" class="tier-button" data-amount="20">$20</button>
+                        </div>
+                        <div class="tier" data-amount="50">
+                            <img src="images/donations/snack4.jpg" alt="$50 donation">
+                            <button type="button" class="tier-button" data-amount="50">$50</button>
+                        </div>
+                        <div class="tier other"> 
+                            <button type="button" id="otherAmountButton" class="tier-button">Other Amount</button>   
+                        </div>
+
+                        <div class="tier other"> 
+                            <label for="otherAmount" id="otherAmountLabel">Amount:</label>  
+                            <input type="number" id="otherAmount" placeholder="Monies" min="1">
                         </div>
                     </div>
+                    
                     <select id="paymentMethod">
-                        <option value="paypal">PayPal</option>
-                        <option value="visa">Visa</option>
+                        <option value="Paypal">PayPal</option>
+                        <option value="Visa">Visa</option>
+                        <option value="MasterCard">MasterCard</option>
+                        <option value="AmericanExpress">American Express</option>
                     </select>
-                    <button type="button" id="donateButton">Donate</button>
+                    <div class="tier other">
+                        <button type="button" id="donateButton" >Give a treat!</button>
+                    </div>
+                    
                 </form>
             </div>
         </div>
     </main>
 
     <footer>
-        <!-- Footer content here -->
+        <div>
+            <p>© 2023 Animal Adoption Center</p>
+        </div>
     </footer>
 
     <script src="scripts/donation.js"></script>
