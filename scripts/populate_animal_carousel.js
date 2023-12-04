@@ -49,7 +49,7 @@ function createCard(targetID, integer){
   
     // Create card 
     var card = document.createElement("div");
-    card.classList.add("card");
+    card.classList.add("card","border-0");
     card.id = "animalCard"+integer;
   
     // Card image
@@ -78,6 +78,8 @@ function createCard(targetID, integer){
     card.appendChild(img);
     card.appendChild(cardBody);
     cardColumn.appendChild(card);
+
+    
   
     // Add to target container
     targetContainer.appendChild(cardColumn);
@@ -111,7 +113,8 @@ function updateCardContent(cardElement, animal) {
 
     // Update image source
     if (imgElement && animal.image) {
-        imgElement.src = animal.image;
+        // this changes the script to work with Guillaume's method of finding animal pcitures
+        imgElement.src = "images/animals/"+animal.species.toLowerCase().replace(/\s/g, "")+animal.id+".jpg";
         imgElement.alt = animal.name;
     }
 
