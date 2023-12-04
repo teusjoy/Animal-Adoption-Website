@@ -56,7 +56,7 @@ footer {
 
 @media (max-width: 768px) {
     .contact-form form, .company-images img {
-        width: 100%;
+        width: 80%;
     }
     
     .contact-info, .company-images, .contact-form {
@@ -64,7 +64,7 @@ footer {
     }
 
     .contact-form form {
-        max-width: 100%;
+        max-width: 80%;
     }
 
     .contact-info h1, .contact-form h1 {
