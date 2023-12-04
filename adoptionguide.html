@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+
+    <!-- HomePage CSS -->
+    <link href="styles/homepage.css" rel="stylesheet">
+    <link href="styles/adoptionguide.css" rel="stylesheet">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+          integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" rel="stylesheet">
+
+
+</head>
+
+<body>
+<header>
+    <div>
+        <!--NAV BAR -->
+        <nav class="navbar navbar-expand-sm fixed-top custom-navbar">
+            <!--Use custom-navbar-brand ... to make changes!-->
+            <a class="navbar-brand" href="#">Assignment_3</a>
+            <button aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"
+                    class="navbar-toggler" data-bs-target="#collapsibleNavId"
+                    data-bs-toggle="collapse" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a aria-current="page" class="nav-link active" href="#div1">Adopt <span class="visually-hidden">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#div2">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#div3">Donate</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle"
+                           data-bs-toggle="dropdown" href="#" id="dropdownId" role="button">Find</a>
+                        <div aria-labelledby="dropdownId" class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Adoption</a>
+                            <a class="dropdown-item" href="#">Donation</a>
+                            <a class="dropdown-item" href="#">Volunteering</a>
+                            <a class="dropdown-item" href="#">Set appointment</a>
+                            <a class="dropdown-item" href="#">About Us</a>
+                        </div>
+                    </li>
+                </ul>
+                <form class="d-flex my-2 my-lg-0">
+                    <input class="form-control me-2" placeholder="Search" type="text">
+                    <!--use  .btn custom-btn-outline-success... to make your own!-->
+                    <button class="btn btn-outline-success" style="margin-right: 2%;"
+                            type="submit">
+                        Search
+                    </button>
+                </form>
+            </div>
+        </nav>
+
+    </div>
+</header>
+
+<main>
+
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Adoption Process</h2>
+        <div class="row">
+            <!-- Step 1 -->
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Step 1: Choose an Animal</h5>
+                        <p class="card-text">Browse through our list of adorable animals and select one that you want to
+                            adopt.</p>
+                        <button class="btn btn-primary" id="step1" onclick="toggleCheckmark('step1')">Mark as
+                            Completed
+                        </button>
+                        <div class="mt-3" id="checkmark1" style="display:none;">✅ Completed</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Step 2: Review Adoption Fees</h5>
+                        <p class="card-text">Understand the financial responsibilities associated with pet ownership by
+                            reviewing the adoption fees.</p>
+                        <button class="btn btn-primary" id="step2" onclick="toggleCheckmark('step2')">Mark as
+                            Completed
+                        </button>
+                        <div class="mt-3" id="checkmark2" style="display:none;">✅ Completed</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Step 3: Complete Adoption Form</h5>
+                        <p class="card-text">Fill out the adoption form at <a href="adoptionmanager.html">adoptionmanager.html</a>
+                            to finalize the adoption process.</p>
+                        <button class="btn btn-primary" id="step3" onclick="toggleCheckmark('step3')">Mark as
+                            Completed
+                        </button>
+                        <div class="mt-3" id="checkmark3" style="display:none;">✅ Completed</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="congrats__container" id="congratsMessage" style="display:none;">
+            <div class="congrats__message">
+                Congratulations, you can adopt. Proceed to the <a href="adoptionmanager.html">adoption manager</a> to
+                complete. Be sure to pay!
+                <!-- added close btn -->
+                <button class="close-btn" onclick="closeCongratsMessage()">X</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Adoption Fees</h2>
+
+        <div class="complaining" style="display: flex; justify-content: center; align-items: center; height: 100px; padding: 300px;">
+            <h1>Have a <strong>COMPLAIN</strong> about our fees?</h1>
+            <img id="guide__complain" src="https://static.wixstatic.com/media/875ae7_ed1fdf04dbee48dc8b1817c1810f1b3a~mv2.png/v1/fill/w_560,h_560,fp_0.50_0.50,q_85,usm_0.66_1.00_0.01,enc_auto/image.png">
+        </div>
+
+        <h3>Dogs</h3>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Fee Type</th>
+                <th>Amount</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Initial Adoption Fee</td>
+                <td>150$</td>
+            </tr>
+            <tr>
+                <td>Admin Fee</td>
+                <td>50$</td>
+            </tr>
+            <tr>
+                <td>Vet Fee</td>
+                <td>100$</td>
+            </tr>
+            <tr>
+                <td>Dog Food Starting Kit</td>
+                <td>39$</td>
+            </tr>
+            </tbody>
+        </table>
+
+
+        <h3>Cats</h3>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Initial Adoption Fee</h5>
+                        <p class="card-text">120$</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Admin Fee</h5>
+                        <p class="card-text">40$</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Vet Fee</h5>
+                        <p class="card-text">80$</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <h3>Parrots</h3>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Fee Type</th>
+                    <th scope="col">Amount</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td data-label="Fee__Type">Initial Adoption Fee</td>
+                    <td data-label="Amount">200$</td>
+                </tr>
+                <tr>
+                    <td data-label="Fee__Type">Cage and Setup Fee</td>
+                    <td data-label="Amount">75$</td>
+                </tr>
+                <tr>
+                    <td data-label="Fee__Type">Vet Fee</td>
+                    <td data-label="Amount">90$</td>
+                </tr>
+                <tr>
+                    <td data-label="Fee__Type">Vet Fee</td>
+                    <td data-label="Amount">90$</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>Rabbits</h3>
+        <div class="accordion" id="rabbitFeesAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button aria-controls="collapseOne" aria-expanded="true" class="accordion-button"
+                            data-bs-target="#collapseOne" data-bs-toggle="collapse" type="button">
+                        Initial Adoption Fee
+                    </button>
+                </h2>
+                <div aria-labelledby="headingOne" class="accordion-collapse collapse show"
+                     data-bs-parent="#rabbitFeesAccordion" id="collapseOne">
+                    <div class="accordion-body">
+                        <strong>100$</strong> This fee covers initial medical checkups and vaccinations.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button aria-controls="collapseTwo" aria-expanded="false" class="accordion-button collapsed"
+                            data-bs-target="#collapseTwo" data-bs-toggle="collapse" type="button">
+                        Care Package Fee
+                    </button>
+                </h2>
+                <div aria-labelledby="headingTwo" class="accordion-collapse collapse"
+                     data-bs-parent="#rabbitFeesAccordion" id="collapseTwo">
+                    <div class="accordion-body">
+                        <strong>50$</strong> Includes a starter kit with food, bedding, and care information.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button aria-controls="collapseThree" aria-expanded="false" class="accordion-button collapsed"
+                            data-bs-target="#collapseThree" data-bs-toggle="collapse" type="button">
+                        Vet Fee
+                    </button>
+                </h2>
+                <div aria-labelledby="headingThree" class="accordion-collapse collapse"
+                     data-bs-parent="#rabbitFeesAccordion" id="collapseThree">
+                    <div class="accordion-body">
+                        <strong>80$.</strong> For additional veterinary care and spaying/neutering if necessary.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3>Fish</h3>
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">Fee Type</th>
+                <th scope="col">Details</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Initial Adoption Fee</td>
+                <td>
+                    <ul class="list-group">
+                        <li class="list-group-item">Price: 30$</li>
+                        <li class="list-group-item">Includes first month's food supply</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Aquarium Setup Fee</td>
+                <td>
+                    <ul class="list-group">
+                        <li class="list-group-item">Price: 100$</li>
+                        <li class="list-group-item">Includes tank, filters, and lighting</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Care Package Fee</td>
+                <td>
+                    <ul class="list-group">
+                        <li class="list-group-item">Price: 20$</li>
+                        <li class="list-group-item">Contains water conditioner, food, and net</li>
+                    </ul>
+                </td>
+            </tr>
+
+            </tbody>
+        </table>
+
+        <!-- badges for the hampter -->
+        <h3>Guinea Pigs</h3>
+        <div class="d-flex flex-wrap align-items-center">
+            <span class="badge bg-primary m-2" data-bs-placement="top" data-bs-toggle="tooltip"
+                  title="Includes initial medical checkups and vaccinations.">$50 - Initial Fee</span>
+            <span class="badge bg-secondary m-2" data-bs-placement="top" data-bs-toggle="tooltip"
+                  title="Covers cage, feeding bottle, and bedding materials.">$100 - Cage Setup Fee</span>
+            <span class="badge bg-success m-2" data-bs-placement="top" data-bs-toggle="tooltip"
+                  title="Covers ongoing support and advice for care.">$30 - Care Support Fee</span>
+            <span class="badge bg-danger m-2" data-bs-placement="top" data-bs-toggle="tooltip"
+                  title="For additional veterinary care if needed.">$70 - Vet Fee</span>
+        </div>
+
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>Animal</th>
+                <th>Fee Type</th>
+                <th>Amount/Details (CAD)</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            <tr>
+                <td rowspan="4">Dogs</td>
+                <td>Initial Adoption Fee</td>
+                <td>150$</td>
+            </tr>
+            <tr>
+                <td>Admin Fee</td>
+                <td>50$</td>
+            </tr>
+            <tr>
+                <td>Vet Fee</td>
+                <td>100$</td>
+            </tr>
+            <tr>
+                <td>Dog Food Starting Kit</td>
+                <td>39$</td>
+            </tr>
+
+
+            <tr>
+                <td rowspan="3">Cats</td>
+                <td>Initial Adoption Fee</td>
+                <td>120$</td>
+            </tr>
+            <tr>
+                <td>Admin Fee</td>
+                <td>40$</td>
+            </tr>
+            <tr>
+                <td>Vet Fee</td>
+                <td>80$</td>
+            </tr>
+
+
+            <tr>
+                <td rowspan="3">Parrots</td>
+                <td>Initial Adoption Fee</td>
+                <td>200$</td>
+            </tr>
+            <tr>
+                <td>Cage and Setup Fee</td>
+                <td>75$</td>
+            </tr>
+            <tr>
+                <td>Vet Fee</td>
+                <td>90$</td>
+            </tr>
+
+
+            <tr>
+                <td rowspan="3">Rabbits</td>
+                <td>Initial Adoption Fee</td>
+                <td>100$</td>
+            </tr>
+            <tr>
+                <td>Care Package Fee</td>
+                <td>50$</td>
+            </tr>
+            <tr>
+                <td>Vet Fee</td>
+                <td>80$</td>
+            </tr>
+
+
+            <tr>
+                <td rowspan="3">Fish</td>
+                <td>Initial Adoption Fee</td>
+                <td>30$</td>
+            </tr>
+            <tr>
+                <td>Aquarium Setup Fee</td>
+                <td>100$</td>
+            </tr>
+            <tr>
+                <td>Care Package Fee</td>
+                <td>20$</td>
+            </tr>
+
+            <tr>
+                <td rowspan="4">Guinea Pigs</td>
+                <td>Initial Fee</td>
+                <td>50$</td>
+            </tr>
+            <tr>
+                <td>Cage Setup Fee</td>
+                <td>100$</td>
+            </tr>
+            <tr>
+                <td>Care Support Fee</td>
+                <td>30$</td>
+            </tr>
+            <tr>
+                <td>Vet Fee</td>
+                <td>70$</td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</main>
+<footer>
+    © 2023 Animal Adoption Center
+</footer>
+
+<!-- Bootstrap JavaScript Libraries -->
+<script crossorigin="anonymous"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js">
+</script>
+
+<script crossorigin="anonymous"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js">
+</script>
+<script>
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+    function toggleCheckmark(stepId) {
+        var checkmarkId = "checkmark" + stepId.charAt(stepId.length - 1);
+        var checkmark = document.getElementById(checkmarkId);
+        var isVisible = checkmark.style.display === 'block';
+        checkmark.style.display = isVisible ? 'none' : 'block';
+        if (!isVisible) {
+            checkAllCompleted();
+        }
+    }
+
+    function checkAllCompleted() {
+        var allCompleted = true;
+        for (var i = 1; i <= 3; i++) {
+            if (document.getElementById("checkmark" + i).style.display === 'none') {
+                allCompleted = false;
+                break;
+            }
+        }
+
+        if (allCompleted) {
+            document.getElementById("congratsMessage").style.display = 'flex';
+        }
+    }
+
+    function forceRender() {
+        var message = document.getElementById("congratsMessage");
+        message.classList.add("force-render");
+        setTimeout(() => message.classList.remove("force-render"), 50);
+    }
+
+    function closeCongratsMessage() {
+        document.getElementById("congratsMessage").style.display = 'none';
+    }
+</script>
+</body>
+
+</html>
