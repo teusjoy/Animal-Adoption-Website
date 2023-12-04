@@ -1,0 +1,119 @@
+@import url("universal.css");
+
+/*
+* Carousel Styling
+*/
+#featured-animals{
+    background-color:var(--white1);
+    padding-top: var(--navbar-height);
+}
+
+#featured-animals-container{
+    margin-left: 15vw;
+    margin-right: 15vw;
+    height:auto;
+}
+
+.col{
+    width: 15vw;
+}
+
+.card {
+    margin: 1vw;
+  }
+
+.card-body{
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    height: 10vh;
+}
+  
+.card-img-top {
+    height: 40vh;
+    object-fit:cover;
+}
+
+#div1{
+    height:100vh;
+    background-color: lightgray;
+    padding-top: var(--navbar-height);
+}
+
+#div2{
+    height:100vh;
+    background-color: darkgrey;
+    padding-top: var(--navbar-height);
+}
+
+#div3{
+    height:100vh;
+    background-color: grey;
+    padding-top: var(--navbar-height);
+}
+
+/*
+* MAP Styling
+*/
+
+#map {
+    height: 30vh;
+    position: relative; 
+  }
+  
+  #map .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: rgb(210, 65, 65);
+    background-color: rgb(255, 255, 255,0.8);
+    font-size: 18px;
+    font-weight: bold;  
+  }
+
+.overlay svg {
+    width: 20px;
+    height: 20px;
+    fill: white;
+    stroke: rgb(210, 65, 65);
+    stroke-width: 2px;  
+    vertical-align: middle;
+}
+
+
+footer{
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+
+@media (max-width: 800px) {
+    #featured-animals-container{
+        margin-left: 3vw;
+        margin-right: 3vw;
+    }
+}
+
+/* Media query for smaller screens 
+*  Carousel Sizing 
+*/
+@media (max-width: 480px) {
+
+    .card-img-top {
+        max-height: 150px;
+    }
+    .card-title{
+        font-size: medium;
+    }
+    .card-text{
+        font-size: small;
+    }
+
+    #featured-animals-container{
+        margin-left: 0rem;
+        margin-right: 0rem;
+    }
+}
+

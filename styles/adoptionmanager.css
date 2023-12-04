@@ -1,0 +1,80 @@
+.custom-navbar {
+    background-color: #dedede; /* Custom background color */
+}
+
+
+.custom-navbar-brand{
+    padding-left: 1%;
+    color: #308292;
+}
+
+.btn custom-btn-outline-success{
+    /*
+    *create a custom btn
+   */
+}
+
+.card {
+    padding-bottom: 20px;
+}
+
+.container {
+    padding: 35px;
+    align-content: center;
+}
+
+.adopt-me-button {
+    position : absolute;
+    left: 10px;
+    bottom: 0px;
+
+}
+
+
+main__content {
+    padding: 20px;
+    margin-top: 100px;
+}
+
+
+#adopt__banner {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+
+.card {
+    width: 18rem;
+    margin: 10px;
+}
+
+#adopterInfoForm .form-control {
+    margin-bottom: 15px;
+}
+
+.modal-content {
+    padding: 20px;
+}
+
+
+@media (max-width: 768px) {
+    .main__content {
+        padding: 10px;
+        margin-top: 60px; /* Reduced top margin for smaller screens */
+    }
+
+    /* Additional responsive styles can be added here */
+    .card {
+        width: 100%; /* Full width on smaller screens */
+        margin: 5px 0; /* Reduce margin for a tighter layout */
+    }
+
+    #adopt__banner {
+        margin-bottom: 15px;
+    }
+
+    .modal-content {
+        padding: 10px;
+    }
+}
