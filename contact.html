@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles/contact.css">
+    <link href="styles/homepage.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div>
+            
+            <nav class="navbar navbar-expand-sm fixed-top custom-navbar">
+                
+                <a class="navbar-brand" href="#">Assignment_3</a>
+                <button aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"
+                        class="navbar-toggler"
+                        data-bs-target="#collapsibleNavId"
+                        data-bs-toggle="collapse" type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a aria-current="page" class="nav-link active" href="adoptionmanager.html">Adopt <span class="visually-hidden">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#div2">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#div3">Donate</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle"
+                               data-bs-toggle="dropdown"
+                               href="#" id="dropdownId" role="button">Find</a>
+                            <div aria-labelledby="dropdownId" class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Adoption</a>
+                                <a class="dropdown-item" href="#">Donation</a>
+                                <a class="dropdown-item" href="#">Volunteering</a>
+                                <a class="dropdown-item" href="#">Set appointment</a>
+                                <a class="dropdown-item" href="#">About Us</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <form class="d-flex my-2 my-lg-0">
+                        <input class="form-control me-2" placeholder="Search" type="text">
+                        
+                        <button class="btn btn-outline-success" style="margin-right: 2%;"
+                                type="submit">
+                            Search
+                        </button>
+                    </form>
+                </div>
+            </nav>
+    
+        </div>
+        
+        <h1>Contact Us</h1>
+    </header>
+
+    <main>
+        <section class="contact-info">
+            <h1>Give us a call...</h1>
+            <p><strong>Phone:</strong> +1 234 567 8900</p>
+            <p><strong>Address:</strong> 1234 Example St, City, Country</p>
+        </section>
+
+        <section class="company-images">
+            <img src="images/contact/hello-dog.gif" alt="This is a dog with a phone">
+        </section>
+
+        <section class="contact-form">
+            <h2>...or leave us a message!</h2>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+    
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+        <section class="company-images">
+            <img src="images/contact/goodboiIT.jpg" alt="Good Boi IT">
+        </section>
+    </main>
+
+    <footer>
+        <p> © 2023 Animal Adoption Center</p>
+    </footer>
+
+    <script src="/scripts/contact.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #f2f2f2;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.contact-info {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.contact-form form {
+    margin: auto;
+    width: 80%;
+    max-width: 400px;
+}
+
+.contact-form label {
+    display: block;
+    margin-top: 10px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+.company-images img {
+    width: 100%;
+    max-width: 400px;
+    margin: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+}
+
+footer {
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.contact-form h2 {
+    text-align: center;
+}
+
+
+@media (max-width: 768px) {
+    .contact-form form, .company-images img {
+        width: 100%;
+    }
+    
+    .contact-info, .company-images, .contact-form {
+        text-align: center;
+    }
+
+    .contact-form form {
+        max-width: 100%;
+    }
+
+    .contact-info h1, .contact-form h1 {
+        font-size: 1.5rem;
+    }
+}

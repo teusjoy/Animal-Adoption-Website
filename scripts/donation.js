@@ -12,7 +12,6 @@ document.querySelectorAll('.tier-button').forEach(button => {
     });
 });
 
-
 // Event listener for the 'Other Amount' button
 document.getElementById('otherAmountButton').addEventListener('click', function() {
     document.querySelectorAll('.tier-button').forEach(btn => btn.classList.remove('active'));
@@ -21,7 +20,6 @@ document.getElementById('otherAmountButton').addEventListener('click', function(
     document.getElementById('otherAmount').focus();
     
 });
-
 
 // Add a click event listener to the 'donateButton'
 document.getElementById('donateButton').addEventListener('click', function() {
