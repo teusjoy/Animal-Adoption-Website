@@ -11,11 +11,13 @@ header {
     background-color: #f2f2f2;
     padding: 10px 0;
     text-align: center;
+    
 }
 
 .normal-text {
     font-family: 'Belanosima', sans-serif;
     font-weight: 400; 
+    
 }
 
 
@@ -69,16 +71,23 @@ p {
 }
 
 
+@media (max-width: 768px) {
+    .main-container {
+        padding: 10px;
+    }
+}
+
+
 body{
     background: radial-gradient(circle at top left, transparent 9%, var(--pattern1) 10%, var(--pattern1) 15%, transparent 16%),
     radial-gradient(circle at bottom left, transparent 9%, var(--pattern1) 10%, var(--pattern1) 15%, transparent 16%),
     radial-gradient(circle at top right, transparent 9%, var(--pattern1) 10%, var(--pattern1) 15%, transparent 16%),
     radial-gradient(circle at bottom right, transparent 9%, var(--pattern1) 10%, var(--pattern1) 15%, transparent 16%),
-    radial-gradient(circle, transparent 10%, #ffffff 26%), /*This is actually the largest color*/
+    radial-gradient(circle, transparent 10%, #ffffff 26%), 
     linear-gradient(0deg, transparent 44%, var(--pattern1) 45%, var(--pattern1) 55%, transparent 56%),
     linear-gradient(90deg, transparent 44%, var(--pattern1) 45%, var(--pattern1) 55%, transparent 56%);
 background-size: 3em 3em;
-background-color: rgba(255, 255, 255, 1); /* Set background color with 80% opacity */
+background-color: rgba(255, 255, 255, 1); 
 }
 
 
