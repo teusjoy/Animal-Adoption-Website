@@ -1,3 +1,4 @@
+
 :root {
   /*NAV BAR HEIGHT*/
     --navbar-height: 56px; 
@@ -18,22 +19,27 @@
 * NAV BAR Styling
 */
 .custom-navbar {
-  background-color: var(--white1);
-  height: var(--navbar-height); 
+  background-color: rgb(255, 241, 176);
+  height: var(--navbar-height);
+  font-size: 22px; 
 }
 
 .navbar-brand{
   padding-left: 2rem;
   font-family: 'Ultra', serif;
+  
 }
 
 .brand{
   font-family: 'Ultra', serif;
+  
 }
 
 .text-important, a{
   font-family: 'Belanosima', sans-serif;
   font-weight: 600;
+  
+
 }
 
 /*
@@ -44,6 +50,7 @@ p,h1,h2,h3,h4,h5,h6
 .text, p{
   font-family: 'Belanosima', sans-serif;
   font-weight: 400;
+  
 }
 
 /*
