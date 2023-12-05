@@ -5,7 +5,7 @@ html {
 
 body {
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 0px;
     display: flex;
     flex-direction: column;
     min-height: 100%;
@@ -17,6 +17,7 @@ main {
     display: flex;
     flex-direction: column;
 }
+
 
 .donation-section {
     background-size: cover;
@@ -118,6 +119,14 @@ main {
     font-size: 1.5rem;
 }
 
+footer {
+    margin-top: auto;
+    width: 100%;
+    
+    bottom: 0;
+    left: 0;
+}
+
 #donateButton {
     color: #000000; 
     font-size: 1.2rem;
@@ -155,5 +164,9 @@ main {
         text-align: center;
         align-items: center;
         justify-content: center;
+    }
+    
+    footer{
+        font-size: 0.8rem;
     }
 }

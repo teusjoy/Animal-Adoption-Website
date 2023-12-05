@@ -259,4 +259,8 @@ footer{
         margin-left: 0rem;
         margin-right: 0rem;
     }
+
+    footer{
+        font-size: 0.8rem;
+    }
 }
