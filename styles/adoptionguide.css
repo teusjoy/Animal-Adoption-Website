@@ -8,6 +8,42 @@
     padding-top: var(--navbar-height);
 }
 
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-body {
+    flex: 1;
+}
+
+/*.div .container .my-5 .p-2 h3 {*/
+/*    top: 300px;*/
+
+/*}*/
+
+.complaining {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+
+
+.complaining h1 {
+    margin-right: 20px;
+}
+
+.complaining #guide__complain {
+    position: relative;
+    width: 50vh;
+    height: auto;
+    margin-bottom: 20px;
+    max-width: 100%;
+}
 
 .congrats__container {
     position: fixed;
