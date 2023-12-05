@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- HomePage CSS -->
+  <link rel="stylesheet" href="styles/homepage.css">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+  <!-- Populate Animal Carousel Script, 3 for larger screen, 2 for mobile screens.  -->
+  <script src="scripts/populate_animal_carousel.js"></script>
+
+  <!--Font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600&family=Ultra&display=swap" rel="stylesheet">
+
+ 
+</head>
+
+<body>
+  <header>
+    <div id="nav-bar-container">
+        <!--NAV BAR -->
+        <nav class="navbar navbar-expand-sm fixed-top custom-navbar">
+            <!--Use custom-navbar-brand ... to make changes!-->
+            <a class="navbar-brand" href="">Adopt-a-Pet</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#div1" aria-current="page">Adopt <span class="visually-hidden">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#div2">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#div3">Donate</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Find</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownId">
+                            <a class="dropdown-item" href="/adoptionguide.html">Adoption Guide</a>
+                            <a class="dropdown-item" href="/adoptionmanagerV2.html">Make an Adoption</a>
+                            <a class="dropdown-item" href="/donation.html">Make a Donation</a>
+                            <a class="dropdown-item" href="/contact.html">Contact Us</a>
+                            <a class="dropdown-item" href="/FAQ.html">See F.A.Q.</a>
+                            <a class="dropdown-item" href="/index.html">Homepage</a>
+                            
+                        </div>
+                    </li>
+                </ul>
+                <form class="d-flex my-2 my-lg-0">
+                    <input class="form-control me-2" type="text" placeholder="Search">
+                    <!--use  .btn custom-btn-outline-success... to make your own!-->
+                    <button class="btn btn-outline-success" type="submit"
+                    style="margin-right: 2%;">
+                    Search</button>
+                </form>
+            </div>
+        </nav>
+        
+    </div>
+</header>
+
+  <main>
+
+    <div data-bs-spy="scroll" data-bs-target="#nav-example" data-bs-smooth-scroll="true" tabindex="0" >
+        
+        <!-- Carousel showing featured animals-->
+        
+            <div id="featured-animals">
+                <div id="featured-animals-container">
+
+                    <div id="carousel-top-text">
+                        <h2 class="text">Featured Animals</h2>
+                    </div>
+
+                    <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner" role="listbox" id="carousel-listbox">
+                            
+                            <!-- First Carousel with 3 cards, if small screen 2 cards-->
+                            <div class="carousel-item active">
+                                <div class="row justify-content-center align-items-center g-2" id="carouselCardHolder1"></div>
+                            </div>
+
+                            <!-- Second Carousel with 3 cards, if small screen 2 cards -->
+                            <div class="carousel-item">
+                                <div class="row justify-content-center align-items-center g-2" id="carouselCardHolder2"></div>
+                            </div>
+                            
+                            <!--Third Carousel with 2 cards gets generated here if window size width < 480px-->
+                        
+                            <!--Carrousel Controlls-->
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                    
+                        </div> 
+                    </div> <!--End of Carousel-->
+                </div>
+          
+        </div>
+
+        <div id="div1">
+            <div class="container">
+                <div class="content-holder">
+                        <h1 class="text-important">Feeling ready to adopt?</h1>
+                    <div class="content animal-content">    
+                        <div class="pannel animal-pannel">
+                            <div class="pannel-top text">
+                               Before adopting make sure to read our guide!
+                            </div>
+                            <div class="pannel-bottom">
+                                <button type="button" class="btn btn-light btn-lg">
+                                    <!--change the icon height and width-->
+                                    <svg class="icon" height="100" width="100"viewBox="0 -960 960 960" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M560-564v-68q33-14 67.5-21t72.5-7q26 0 51 4t49 10v64q-24-9-48.5-13.5T700-600q-38 0-73 9.5T560-564Zm0 220v-68q33-14 67.5-21t72.5-7q26 0 51 4t49 10v64q-24-9-48.5-13.5T700-380q-38 0-73 9t-67 27Zm0-110v-68q33-14 67.5-21t72.5-7q26 0 51 4t49 10v64q-24-9-48.5-13.5T700-490q-38 0-73 9.5T560-454ZM260-320q47 0 91.5 10.5T440-278v-394q-41-24-87-36t-93-12q-36 0-71.5 7T120-692v396q35-12 69.5-18t70.5-6Zm260 42q44-21 88.5-31.5T700-320q36 0 70.5 6t69.5 18v-396q-33-14-68.5-21t-71.5-7q-47 0-93 12t-87 36v394Zm-40 118q-48-38-104-59t-116-21q-42 0-82.5 11T100-198q-21 11-40.5-1T40-234v-482q0-11 5.5-21T62-752q46-24 96-36t102-12q58 0 113.5 15T480-740q51-30 106.5-45T700-800q52 0 102 12t96 36q11 5 16.5 15t5.5 21v482q0 23-19.5 35t-40.5 1q-37-20-77.5-31T700-240q-60 0-116 21t-104 59ZM280-494Z"/>
+                                    </svg> 
+                                    <h2>
+                                        <a href="/adoptionguide.html">Read guide</a>
+                                    </h2>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="pannel animal-pannel">
+                            <div class="pannel-top text">
+                                Discover our wonderful pets!
+                            </div>
+                            <div class="pannel-bottom">
+                                
+                                <button type="button" class="btn btn-light btn-lg">
+                                    <!--change the icon height and width-->
+                                    <svg class="icon" height="100" width="100" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" >
+                                        <path d="M180-475q-42 0-71-29t-29-71q0-42 29-71t71-29q42 0 71 29t29 71q0 42-29 71t-71 29Zm180-160q-42 0-71-29t-29-71q0-42 29-71t71-29q42 0 71 29t29 71q0 42-29 71t-71 29Zm240 0q-42 0-71-29t-29-71q0-42 29-71t71-29q42 0 71 29t29 71q0 42-29 71t-71 29Zm180 160q-42 0-71-29t-29-71q0-42 29-71t71-29q42 0 71 29t29 71q0 42-29 71t-71 29ZM266-75q-45 0-75.5-34.5T160-191q0-52 35.5-91t70.5-77q29-31 50-67.5t50-68.5q22-26 51-43t63-17q34 0 63 16t51 42q28 32 49.5 69t50.5 69q35 38 70.5 77t35.5 91q0 47-30.5 81.5T694-75q-54 0-107-9t-107-9q-54 0-107 9t-107 9Z"/>
+                                    </svg>
+                                    <h2>
+                                        <a href="/adoptionguide.html">Adopt</a>
+                                    </h2>
+                                </button>
+                            </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="div2">
+            <div class="container">
+                <div class="content-holder">
+                        <h1 class="text-important">Learn about us!</h1>
+                    <div class="content info-content">    
+                        <div class="pannel info-pannel">
+                            <div class="pannel-top text">
+                               Have a Question?<br>Check out our<br>Frequently Asked Questions!
+                            </div>
+                            <div class="pannel-bottom">
+                                <button type="button" class="btn btn-light btn-lg">
+
+                                    <svg class="icon" height="100" width="100" viewBox="0 -960 960 960" xmlns="http://www.w3.org/2000/svg"><path d="M80-40v-80h800v80H80Zm80-120v-240q-33-54-51-114.5T91-638q0-61 15.5-120T143-874q8-21 26-33.5t40-12.5q31 0 53 21t18 50l-11 91q-6 48 8.5 91t43.5 75.5q29 32.5 70 52t89 19.5q60 0 120.5 12.5T706-472q45 23 69.5 58.5T800-326v166H160Zm80-80h480v-86q0-24-12-42.5T674-398q-41-20-95-31t-99-11q-66 0-122.5-27t-96-72.5Q222-585 202-644.5T190-768q-10 30-14.5 64t-4.5 66q0 58 20.5 111.5T240-422v182Zm240-320q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm0-80q33 0 56.5-23.5T560-720q0-33-23.5-56.5T480-800q-33 0-56.5 23.5T400-720q0 33 23.5 56.5T480-640ZM320-160v-37q0-67 46.5-115T480-360h160v80H480q-34 0-57 24.5T400-197v37h-80Zm160-80Zm0-480Z"/></svg>
+                                    <h2>
+                                        <a href="/FAQ.html">Read F.A.Q.</a>
+                                    </h2>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="pannel info-pannel">
+                            <div class="pannel-top text">
+                                Want to contact us?<br>or<br>Know more about us?
+                            </div>
+                            <div class="pannel-bottom">
+                                
+                                <button type="button" class="btn btn-light btn-lg">
+                                    <svg class="icon" height="100" width="100"xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M80-120q-33 0-56.5-23.5T0-200v-560q0-33 23.5-56.5T80-840h800q33 0 56.5 23.5T960-760v560q0 33-23.5 56.5T880-120H80Zm556-80h244v-560H80v560h4q42-75 116-117.5T360-360q86 0 160 42.5T636-200ZM360-400q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Zm400 160 80-80-60-80h-66q-6-18-10-38.5t-4-41.5q0-21 4-40.5t10-39.5h66l60-80-80-80q-54 42-87 106.5T640-480q0 69 33 133.5T760-240Zm-578 40h356q-34-38-80.5-59T360-280q-51 0-97 21t-81 59Zm178-280q-17 0-28.5-11.5T320-520q0-17 11.5-28.5T360-560q17 0 28.5 11.5T400-520q0 17-11.5 28.5T360-480Zm120 0Z"/>
+                                    </svg>
+                                    
+                                    <h2>
+                                        <a href="/contact.html">Contact Us</a>
+                                    </h2>
+                                </button>
+                            </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="div3">
+            <div class="container">
+                <div class="content-holder">
+                        <h1 class="text-important">Donate!</h1>
+                    <div class="content donate-content">    
+                        <div class="pannel donate-pannel">
+                            <div class="pannel-top text">
+                               Donations help!<br>Find out about Donatating!
+                            </div>
+                            <div class="pannel-bottom">
+                                <button type="button" class="btn btn-light btn-lg">
+                                    <svg  class="icon" height="100" width="100" viewBox="0 -960 960 960" xmlns="http://www.w3.org/2000/svg"><path d="M380-80q-59 0-99.5-40.5T240-220q0-9 2.5-14t-.5-8q-3-3-8-.5t-14 2.5q-59 0-99.5-40.5T80-380q0-59 40.5-99.5T220-520q23 0 42 6t36 18l166-166q-12-17-18-36t-6-42q0-59 40.5-99.5T580-880q59 0 99.5 40.5T720-740q0 9-2.5 14t.5 8q3 3 8 .5t14-2.5q59 0 99.5 40.5T880-580q0 59-40.5 99.5T740-440q-23 0-42-6t-36-18L496-298q12 17 18 36t6 42q0 59-40.5 99.5T380-80Zm0-80q26 0 43-17t17-43q0-9-2.5-17.5T430-254q-17-24-14-51.5t24-48.5l166-166q21-21 48.5-24t51.5 14q8 5 16.5 7.5T740-520q26 0 43-17t17-43q0-26-17-43t-43-17q-35 0-49-3.5T662-662q-15-15-18.5-29t-3.5-49q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 11 2 18.5t8 15.5q17 24 14 51.5T520-606L354-440q-21 21-48.5 24T254-430q-8-5-16.5-7.5T220-440q-26 0-43 17t-17 43q0 26 17 43t43 17q35 0 49 3.5t29 18.5q15 15 18.5 29t3.5 49q0 26 17 43t43 17Zm100-320Z"/>
+                                    </svg>
+                                    <h2>
+                                        <a href="/donation.html">Donate now!</a>
+                                    </h2>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div id="map">
+
+            <!-- This crazy src is just for testing, and it does not require an API key-->
+            <iframe
+            width="100%"
+            height="100%"
+            frameborder="0"
+            style="border:0"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.7662001683796!2d-122.41941558468142!3d37.774929979752825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808580999efa8041%3A0xa80a4cfa418051b!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1607894198013!5m2!1sen!2sus"
+            allowfullscreen>
+            </iframe>
+
+            <!-- Overlay div with "We are here" sign -->
+            <div class="overlay navbar-brand">
+                Adopt-a-Pet
+            <!--This svg is the pin-->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2c-4.418 0-8 3.582-8 8 0 4.782 7.303 13.316 7.553 13.632a.993.993 0 0 0 1.292 0c.25-.316 7.553-8.85 7.553-13.632 0-4.418-3.582-8-8-8zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/>
+                </svg>
+            </div>
+                
+        </div>
+    </div><!--End of Spy scroller div-->
+  </main>
+  
+
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
