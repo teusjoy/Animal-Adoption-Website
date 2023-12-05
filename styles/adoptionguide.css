@@ -42,7 +42,7 @@
     animation: fadeIn 2s, rainbowText 3s linear infinite, wavingText 2s linear infinite;
 }
 
-.force-render { }
+/*.force-render { } */
 
 @keyframes fadeIn {
     from { opacity: 0; }

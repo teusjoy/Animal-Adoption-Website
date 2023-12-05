@@ -2,28 +2,30 @@
 <html lang="en">
 
 <head>
-    <title>Title</title>
-    <!-- Required meta tags -->
+    <title>Adopt a Pet - Your Companion Awaits</title>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
-    
+    <meta name="description" content="Find your perfect pet for adoption. Browse through various animal types and complete the adoption process easily.">
+    <meta name="keywords" content="pet adoption, adopt a dog, adopt a cat, animal shelter">
+
+
     <!-- Bootstrap CSS v5.2.1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    
+
     <!--Styles-->
     <link rel="stylesheet" href="styles/universal.css">
-    <link rel="stylesheet" href="styles/adoptionguide.css">
+    <link rel="stylesheet" href="styles/adoptionmanager.css">
 
     <!--Nav Bar-->
     <script src="scripts/navbar.js"></script>
-    
+
 </head>
 <body>
 <main>
     <div class="container main__content mt-5">
         <h2>Adopt a Pet</h2>
-        <img id="adopt__banner" src="https://images.squarespace-cdn.com/content/v1/51fbb364e4b0d35aeaac238d/1375490813782-F18USZ5NXAJE2ZGDMIKV/adoption-fee-banner.jpg?format=1500w">
+        <img id="adopt__banner" alt="Banner talking about adoption fees" src="https://images.squarespace-cdn.com/content/v1/51fbb364e4b0d35aeaac238d/1375490813782-F18USZ5NXAJE2ZGDMIKV/adoption-fee-banner.jpg?format=1500w">
         <div class="mb-3">
             <label class="form-label" for="animalType">Type of Animal</label>
             <select class="form-select" id="animalType" onchange="showAnimals(this.value)">
@@ -89,13 +91,7 @@
 </footer>
 
 <!-- Bootstrap JavaScript Libraries -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
-        crossorigin="anonymous"></script>
-</script>
+
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         fetch('data/animals.json')
@@ -202,6 +198,9 @@
     });
 </script>
 
+
+
+
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
@@ -210,6 +209,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
     integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous">
     </script>
+
+<div class="gtranslate_wrapper"></div>
+<script>window.gtranslateSettings = {"default_language":"en","native_language_names":true,"detect_browser_language":true,"languages":["en","fr"],"wrapper_selector":".gtranslate_wrapper","horizontal_position":"right","vertical_position":"bottom","flag_style":"3d","alt_flags":{"en":"canada","fr":"quebec"}}</script>
+<script src="https://cdn.gtranslate.net/widgets/latest/fn.js" defer></script>
 
 </body>
 
