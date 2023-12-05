@@ -77,4 +77,8 @@ main__content {
     .modal-content {
         padding: 10px;
     }
+
+    footer{
+        font-size: 0.8rem;
+    }
 }

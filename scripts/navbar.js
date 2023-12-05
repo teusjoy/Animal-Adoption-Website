@@ -135,11 +135,12 @@ function generateNavbar() {
     input.type = "text";
     input.className = "form-control me-2";
     input.placeholder = "Search";
+  
     
     let button = document.createElement("button");
     button.className = "btn btn-outline-success";
     button.textContent = "Search";
-    button.style = "margin-right: 2%;";
+    button.style = "margin-right: 200px;";
     
     // Put everything together
     
