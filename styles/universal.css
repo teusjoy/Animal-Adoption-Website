@@ -5,9 +5,13 @@
   /* use better variables names, like: paragraph text, animal name... etc*/
     --green1: #9dffb0; /* (157, 255, 176) */
     --blue1: #81f1f7; /* (129, 241, 247) */
+    --lightblue1: #c9fcff;
     --white1: #fffffa; /* (255, 255, 250) */
     --brown1: #c48d3f; /* (196, 141, 63) */
     --yellow1: #fff563; /* (255, 245, 99) */
+    --text: rgb(27, 4, 10);
+    --pattern1:rgb(255, 241, 176);
+    --icon: rgb(45, 197, 162);
   }
 
 /*
@@ -16,6 +20,30 @@
 .custom-navbar {
   background-color: var(--white1);
   height: var(--navbar-height); 
+}
+
+.navbar-brand{
+  padding-left: 2rem;
+  font-family: 'Ultra', serif;
+}
+
+.brand{
+  font-family: 'Ultra', serif;
+}
+
+.text-important, a{
+  font-family: 'Belanosima', sans-serif;
+  font-weight: 600;
+}
+
+/*
+.text 
+=
+p,h1,h2,h3,h4,h5,h6
+*/
+.text, p{
+  font-family: 'Belanosima', sans-serif;
+  font-weight: 400;
 }
 
 .custom-navbar-brand{

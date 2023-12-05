@@ -3,6 +3,14 @@
 /*
 * Carousel Styling
 */
+
+#carousel-top-text{
+    /*why are none of these workin???*/
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+}
 #featured-animals{
     background-color:var(--white1);
     padding-top: var(--navbar-height);
@@ -34,23 +42,155 @@
     object-fit:cover;
 }
 
-#div1{
+/* link tags
+*  A lot of Bootstrap overriding..
+*/
+
+a {
+    text-decoration: none;
+    color: var(--text);
+}
+
+h1 a{
+    text-decoration: none;
+    color: var(--text);
+}
+
+div a{
+    text-decoration: none;
+    color: var(--text);
+}
+
+a:visited {
+    color: var(--text); /* Change the color of visited links */
+}
+
+
+/*
+  Pannels
+*/
+
+.pannel{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.animal-pannel{
+    background-color: var(--white1);
+    border: 2px solid var(--brown1);
+    border-radius: 10px;
+}
+.animal-content{
+    background-color: var(--pattern1);
+    border: 2px solid var(--brown1);
+    border-radius: 10px;
+}
+
+.info-pannel{
+    background-color: var(--white1);
+    border: 2px solid var(--yellow1);
+    border-radius: 10px;
+}
+
+.info-content{
+    background-color: var(--lightblue1);
+    border: 2px solid var(--white1);
+    border-radius: 10px;
+}
+
+.donate-pannel{
+    background-color: var(--yellow1);
+    border: 2px solid var(--white1);
+    border-radius: 10px;
+}
+
+.donate-content{
+    background-color: var(--lightblue1);
+    border: 2px solid var(--white1);
+    border-radius: 10px;
+}
+
+.pannel-top{
+    overflow: auto;
+    padding-bottom: 1rem;
+}
+
+.icon path {
+    fill: var(--icon);
+}
+
+.content-holder{
+    text-align: center;
+}
+
+.content-holder{
+    margin-left: 15vw;
+    margin-right: 15vw;
+}
+.content{
+    border-radius: 10px;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/*Div backgrounds*/
+#div1,#div2,#div3{
     height:100vh;
-    background-color: lightgray;
     padding-top: var(--navbar-height);
+}
+
+#featured-animals{
+    background: radial-gradient(circle at top left, transparent 9%, #ffffff  10%, var(--pattern1) 15%, transparent 16%),
+                radial-gradient(circle at bottom left, transparent 9%, #ffffff  10%, var(--pattern1) 15%, transparent 16%),
+                radial-gradient(circle at top right, transparent 9%, #ffffff  10%, var(--pattern1) 15%, transparent 16%),
+                radial-gradient(circle at bottom right, transparent 9%, #ffffff  10%, var(--pattern1) 15%, transparent 16%),
+                radial-gradient(circle, transparent 10%, #ffffff 26%), /*This is actually the largest color*/
+                linear-gradient(0deg, transparent 44%, #ffffff  45%, var(--pattern1) 55%, transparent 56%),
+                linear-gradient(90deg, transparent 44%, #ffffff  45%, var(--pattern1) 55%, transparent 56%);
+    background-size: 3em 3em;
+    background-color: rgba(255, 255, 255, 1); /* Set background color with 80% opacity */
+}
+
+#div1{
+    background: radial-gradient(circle at top left, transparent 9%, var(--pattern1) 10%, var(--pattern1) 15%, transparent 16%),
+                radial-gradient(circle at bottom left, transparent 9%, var(--pattern1) 10%, var(--pattern1) 15%, transparent 16%),
+                radial-gradient(circle at top right, transparent 9%, var(--pattern1) 10%, var(--pattern1) 15%, transparent 16%),
+                radial-gradient(circle at bottom right, transparent 9%, var(--pattern1) 10%, var(--pattern1) 15%, transparent 16%),
+                radial-gradient(circle, transparent 10%, #ffffff 26%), /*This is actually the largest color*/
+                linear-gradient(0deg, transparent 44%, var(--pattern1) 45%, var(--pattern1) 55%, transparent 56%),
+                linear-gradient(90deg, transparent 44%, var(--pattern1) 45%, var(--pattern1) 55%, transparent 56%);
+    background-size: 3em 3em;
+    background-color: rgba(255, 255, 255, 1);
 }
 
 #div2{
-    height:100vh;
-    background-color: darkgrey;
-    padding-top: var(--navbar-height);
+    background: radial-gradient(circle at top left, transparent 9%, #ffffff  10%, var(--pattern1) 15%, transparent 16%),
+                radial-gradient(circle at bottom left, transparent 9%, #ffffff  10%, var(--pattern1) 15%, transparent 16%),
+                radial-gradient(circle at top right, transparent 9%, #ffffff  10%, var(--pattern1) 15%, transparent 16%),
+                radial-gradient(circle at bottom right, transparent 9%, #ffffff  10%, var(--pattern1) 15%, transparent 16%),
+                radial-gradient(circle, transparent 10%, #ffffff 26%), /*This is actually the largest color*/
+                linear-gradient(0deg, transparent 44%, #ffffff  45%, var(--pattern1) 55%, transparent 56%),
+                linear-gradient(90deg, transparent 44%, #ffffff  45%, var(--pattern1) 55%, transparent 56%);
+    background-size: 3em 3em;
+    background-color: rgba(255, 255, 255, 1); /* Set background color with 80% opacity */
 }
 
 #div3{
-    height:100vh;
-    background-color: grey;
-    padding-top: var(--navbar-height);
+    background: radial-gradient(circle at top left, transparent 9%, var(--pattern1) 10%, var(--pattern1) 15%, transparent 16%),
+                radial-gradient(circle at bottom left, transparent 9%, var(--pattern1) 10%, var(--pattern1) 15%, transparent 16%),
+                radial-gradient(circle at top right, transparent 9%, var(--pattern1) 10%, var(--pattern1) 15%, transparent 16%),
+                radial-gradient(circle at bottom right, transparent 9%, var(--pattern1) 10%, var(--pattern1) 15%, transparent 16%),
+                radial-gradient(circle, transparent 10%, #ffffff 26%), /*This is actually the largest color*/
+                linear-gradient(0deg, transparent 44%, var(--pattern1) 45%, var(--pattern1) 55%, transparent 56%),
+                linear-gradient(90deg, transparent 44%, var(--pattern1) 45%, var(--pattern1) 55%, transparent 56%);
+    background-size: 3em 3em;
+    background-color: rgba(255, 255, 255, 1); /* Set background color with 80% opacity */
 }
+
 
 /*
 * MAP Styling
@@ -94,6 +234,10 @@ footer{
         margin-left: 3vw;
         margin-right: 3vw;
     }
+    .content-holder{
+        margin-left: 0vw;
+        margin-right: 0vw;
+    }
 }
 
 /* Media query for smaller screens 
@@ -116,4 +260,3 @@ footer{
         margin-right: 0rem;
     }
 }
-
