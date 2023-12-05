@@ -27,7 +27,9 @@ header {
 }
 
 .contact-info h1 {
-    margin-top: 3.5%;
+    margin-top: 5.5%;
+    margin-bottom: 0;
+    padding-top: 7%;
     text-align: center;
 }
 
@@ -70,13 +72,12 @@ p {
     margin: 0;
 }
 
-
-@media (max-width: 768px) {
-    .main-container {
-        padding: 10px;
-    }
+.container{
+    width: 25%;
+    background-color: rgba(227, 236, 99, 0.432);
+    padding: 20px;
+    border-radius: 60px;
 }
-
 
 body{
     background: radial-gradient(circle at top left, transparent 9%, var(--pattern1) 10%, var(--pattern1) 15%, transparent 16%),

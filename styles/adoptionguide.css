@@ -8,6 +8,9 @@
     padding-top: var(--navbar-height);
 }
 
+body{
+    font-size: 18px;
+}
 
 .congrats__container {
     position: fixed;
@@ -20,6 +23,53 @@
     justify-content: center;
     background: rgba(0, 0, 0, 0.5);
     z-index: 1000;
+}
+
+.container{
+    background-color: rgba(227, 236, 99, 0.432);
+    padding: 40px;
+    border-radius: 40px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+h1, h2, h3 {
+    font-family: 'Ultra', serif; 
+}
+
+h2 {
+    font-size: 40px;
+}
+
+header {
+    background-color: #f2f2f2;
+    padding: 10px 0;
+    text-align: center;
+    
+}
+
+.normal-text {
+    font-family: 'Belanosima', sans-serif;
+    font-weight: 400; 
+    
+}
+
+.accordion-header{
+    font-size: 16px;
+}
+body {
+    background: radial-gradient(circle at top left, transparent 9%, var(--pattern1) 10%, var(--pattern1) 15%, transparent 16%),
+    radial-gradient(circle at bottom left, transparent 9%, var(--pattern1) 10%, var(--pattern1) 15%, transparent 16%),
+    radial-gradient(circle at top right, transparent 9%, var(--pattern1) 10%, var(--pattern1) 15%, transparent 16%),
+    radial-gradient(circle at bottom right, transparent 9%, var(--pattern1) 10%, var(--pattern1) 15%, transparent 16%),
+    radial-gradient(circle, transparent 10%, #ffffff 26%), /*This is actually the largest color*/
+    linear-gradient(0deg, transparent 44%, var(--pattern1) 45%, var(--pattern1) 55%, transparent 56%),
+    linear-gradient(90deg, transparent 44%, var(--pattern1) 45%, var(--pattern1) 55%, transparent 56%);
+background-size: 3em 3em;
+background-color: rgba(255, 255, 255, 1); /* Set background color with 80% opacity */
 }
 
 .close-btn {
@@ -122,6 +172,10 @@
     height: auto;
 }
 
+#guide__complain{
+    padding: 20px;
+    border-radius: 80px;
+}
 /* Accordion */
 .accordion-button {
     font-size: 1em;
