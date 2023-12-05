@@ -25,16 +25,16 @@ body{
     z-index: 1000;
 }
 
-
 .container{
     background-color: rgba(227, 236, 99, 0.432);
     padding: 40px;
     border-radius: 40px;
+    width:40%;
 }
 
 body {
     font-family: Arial, sans-serif;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 h1, h2, h3 {
@@ -85,7 +85,7 @@ background-color: rgba(255, 255, 255, 1); /* Set background color with 80% opaci
 
 .congrats__message {
     position: relative;
-    padding: 20px;
+    padding: 10px;
     background: white;
     border-radius: 10px;
     font-size: 1.5rem;

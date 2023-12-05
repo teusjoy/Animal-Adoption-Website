@@ -252,11 +252,15 @@ footer{
         font-size: medium;
     }
     .card-text{
-        font-size: small;
+        font-size: medium;
     }
 
     #featured-animals-container{
         margin-left: 0rem;
         margin-right: 0rem;
+    }
+
+    footer{
+        font-size: 0.8rem;
     }
 }

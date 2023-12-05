@@ -40,7 +40,7 @@ function generateNavbar() {
     let navbarBrand = document.createElement("a");
     navbarBrand.className = "navbar-brand";
     navbarBrand.href = "/index.html"; 
-    navbarBrand.textContent = "Assignment_3"; //Brand Name Goes here
+    navbarBrand.textContent = "Adopt-a-Pet"; //Brand Name Goes here
   
     // Create navbar toggler button
     let navbarToggler = document.createElement("button");
@@ -105,8 +105,8 @@ function generateNavbar() {
     // Find menu item links /  Drop down menu links
     let findLinks = [
     { href:"/adoptionguide.html", text:"Adoption Guide" },
-    { href:"/adoptionmanagerV1.html", text:"Make an Adoption (V1)"},
-    { href:"/adoptionmanagerV2.html", text:"Make an Adoption (v2)"},
+    //{ href:"/adoptionmanagerV1.html", text:"Make an Adoption (V1)"},
+    { href:"/adoptionmanagerV2.html", text:"Make an Adoption"},
     { href:"/donation.html", text:"Make a Donation"},
     { href:"/contact.html", text:"Contact Us"},
     { href:"/FAQ.html", text:"See F.A.Q."},
@@ -135,11 +135,12 @@ function generateNavbar() {
     input.type = "text";
     input.className = "form-control me-2";
     input.placeholder = "Search";
+  
     
     let button = document.createElement("button");
     button.className = "btn btn-outline-success";
     button.textContent = "Search";
-    button.style = "margin-right: 2%;";
+    button.style = "margin-right: 200px;";
     
     // Put everything together
     

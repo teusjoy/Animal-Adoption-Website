@@ -1,5 +1,23 @@
-.custom-navbar {
-    background-color: #dedede; /* Custom background color */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+}
+
+h1, h2, h3 {
+    font-family: 'Ultra', serif; 
+}
+
+header {
+    background-color: #f2f2f2;
+    padding: 10px 0;
+    text-align: center;
+    
+}
+
+.normal-text {
+    font-family: 'Belanosima', sans-serif;
+    font-weight: 400; 
+    
 }
 
 
@@ -8,18 +26,23 @@
     color: #308292;
 }
 
-.btn custom-btn-outline-success{
-    /*
+/*.btn custom-btn-outline-success{
+    
     *create a custom btn
-   */
-}
+   
+}*/
 
 .card {
     padding-bottom: 20px;
 }
 
-.container {
-    padding: 35px;
+
+
+.container{
+    background-color: rgba(227, 236, 99, 0.432);
+    padding: 40px;
+    border-radius: 40px;
+    width:70%;
     align-content: center;
 }
 
@@ -31,7 +54,7 @@
 }
 
 
-main__content {
+#main__content {
     padding: 20px;
     margin-top: 100px;
 }
@@ -41,12 +64,14 @@ main__content {
     width: 100%;
     height: auto;
     margin-bottom: 20px;
+    border-radius: 40px;
 }
 
 
 .card {
     width: 18rem;
     margin: 10px;
+    
 }
 
 #adopterInfoForm .form-control {
@@ -55,6 +80,18 @@ main__content {
 
 .modal-content {
     padding: 20px;
+}
+
+body {
+    background: radial-gradient(circle at top left, transparent 9%, var(--pattern1) 10%, var(--pattern1) 15%, transparent 16%),
+    radial-gradient(circle at bottom left, transparent 9%, var(--pattern1) 10%, var(--pattern1) 15%, transparent 16%),
+    radial-gradient(circle at top right, transparent 9%, var(--pattern1) 10%, var(--pattern1) 15%, transparent 16%),
+    radial-gradient(circle at bottom right, transparent 9%, var(--pattern1) 10%, var(--pattern1) 15%, transparent 16%),
+    radial-gradient(circle, transparent 10%, #ffffff 26%), /*This is actually the largest color*/
+    linear-gradient(0deg, transparent 44%, var(--pattern1) 45%, var(--pattern1) 55%, transparent 56%),
+    linear-gradient(90deg, transparent 44%, var(--pattern1) 45%, var(--pattern1) 55%, transparent 56%);
+background-size: 3em 3em;
+background-color: rgba(255, 255, 255, 1); /* Set background color with 80% opacity */
 }
 
 
@@ -76,5 +113,9 @@ main__content {
 
     .modal-content {
         padding: 10px;
+    }
+
+    footer{
+        font-size: 0.8rem;
     }
 }
