@@ -1,0 +1,203 @@
+@import url("universal.css");
+/*This adds a padding for V1*/
+.my-5{
+    padding-top: var(--navbar-height);
+}
+/*This adds a padding for V2*/
+.mt-5{
+    padding-top: var(--navbar-height);
+}
+
+body{
+    font-size: 18px;
+}
+
+.congrats__container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.container{
+    background-color: rgba(227, 236, 99, 0.432);
+    padding: 40px;
+    border-radius: 40px;
+    width:40%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+}
+
+h1, h2, h3 {
+    font-family: 'Ultra', serif; 
+}
+
+h2 {
+    font-size: 40px;
+}
+
+header {
+    background-color: #f2f2f2;
+    padding: 10px 0;
+    text-align: center;
+    
+}
+
+.normal-text {
+    font-family: 'Belanosima', sans-serif;
+    font-weight: 400; 
+    
+}
+
+.accordion-header{
+    font-size: 16px;
+}
+body {
+    background: radial-gradient(circle at top left, transparent 9%, var(--pattern1) 10%, var(--pattern1) 15%, transparent 16%),
+    radial-gradient(circle at bottom left, transparent 9%, var(--pattern1) 10%, var(--pattern1) 15%, transparent 16%),
+    radial-gradient(circle at top right, transparent 9%, var(--pattern1) 10%, var(--pattern1) 15%, transparent 16%),
+    radial-gradient(circle at bottom right, transparent 9%, var(--pattern1) 10%, var(--pattern1) 15%, transparent 16%),
+    radial-gradient(circle, transparent 10%, #ffffff 26%), /*This is actually the largest color*/
+    linear-gradient(0deg, transparent 44%, var(--pattern1) 45%, var(--pattern1) 55%, transparent 56%),
+    linear-gradient(90deg, transparent 44%, var(--pattern1) 45%, var(--pattern1) 55%, transparent 56%);
+background-size: 3em 3em;
+background-color: rgba(255, 255, 255, 1); /* Set background color with 80% opacity */
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.congrats__message {
+    position: relative;
+    padding: 10px;
+    background: white;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    color: #000;
+    animation: fadeIn 2s, rainbowText 3s linear infinite, wavingText 2s linear infinite;
+}
+
+/*.force-render { } */
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes rainbowText {
+    0% { color: red; }
+    14% { color: orange; }
+    28% { color: yellow; }
+    42% { color: green; }
+    57% { color: blue; }
+    71% { color: indigo; }
+    85% { color: violet; }
+    100% { color: red; }
+}
+
+@keyframes wavingText {
+    0%, 100% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-toggler {
+        margin-right: 0;
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+
+    .card-title {
+        font-size: 1.2em;
+    }
+
+    .table-responsive {
+        overflow-x: auto;
+    }
+
+    .container, .navbar {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .btn, .form-control {
+        font-size: 1em;
+        padding: 10px;
+    }
+
+    .badge {
+        margin: 5px;
+        font-size: 0.9em;
+    }
+
+    h1, h2, h3 {
+        font-size: 1.5em;
+    }
+
+    .complaining {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .complaining h1 {
+        margin-bottom: 20px;
+    }
+}
+
+/* Image */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+#guide__complain{
+    padding: 20px;
+    border-radius: 80px;
+}
+/* Accordion */
+.accordion-button {
+    font-size: 1em;
+}
+
+/* Tooltip Responsiveness */
+[data-bs-toggle="tooltip"] {
+    font-size: 0.9em;
+}
+
+/* very small screens */
+@media screen and (max-width: 480px) {
+    h1, h2, h3 {
+        font-size: 1.3em;
+    }
+
+    .btn, .form-control {
+        font-size: 0.9em;
+    }
+
+    footer{
+        font-size: 0.8rem;
+    }
+}
