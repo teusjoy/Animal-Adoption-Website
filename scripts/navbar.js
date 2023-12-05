@@ -40,7 +40,7 @@ function generateNavbar() {
     let navbarBrand = document.createElement("a");
     navbarBrand.className = "navbar-brand";
     navbarBrand.href = "/index.html"; 
-    navbarBrand.textContent = "Assignment_3"; //Brand Name Goes here
+    navbarBrand.textContent = "Adopt-a-Pet"; //Brand Name Goes here
   
     // Create navbar toggler button
     let navbarToggler = document.createElement("button");
