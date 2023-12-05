@@ -105,8 +105,8 @@ function generateNavbar() {
     // Find menu item links /  Drop down menu links
     let findLinks = [
     { href:"/adoptionguide.html", text:"Adoption Guide" },
-    { href:"/adoptionmanagerV1.html", text:"Make an Adoption (V1)"},
-    { href:"/adoptionmanagerV2.html", text:"Make an Adoption (v2)"},
+    //{ href:"/adoptionmanagerV1.html", text:"Make an Adoption (V1)"},
+    { href:"/adoptionmanagerV2.html", text:"Make an Adoption"},
     { href:"/donation.html", text:"Make a Donation"},
     { href:"/contact.html", text:"Contact Us"},
     { href:"/FAQ.html", text:"See F.A.Q."},
