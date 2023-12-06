@@ -1,64 +1,59 @@
 # Animal-Adoption-Website
 > This is an animal adoption website built in HTML5, CSS3, and JavaScript.
 
+# Purpose:
+The primary purpose of our animal adoption website is to facilitate the responsible and compassionate adoption of pets, connecting loving homes with animals in need. Through this platform, we strive to raise awareness about animal welfare, encourage responsible pet ownership, and contribute to the reduction of homeless animals. These goals align with our commitment to creating a positive impact on the lives of animals and the community while promoting a culture of responsible pet ownership.
+
+# Goals:
+1. Facilitate Successful Adoptions:
+    - Provide clear and concise information on the adoption process.
+    - Showcase available animals for adoption and update the list regularly.
+
+2. Transparency and Trust:
+    - Build trust by providing transparent information about the adoption process, fees, and the organization's mission.
+    - Establish a reputation for honesty and ethical practices in animal welfare.
+
+3. Promote Donations and Support:
+    - Raise funds to support the maintenance of the website and the welfare of animals.
+    - Encourage monetary donations to further the organization's mission.
+
 # Website Structure: 
 
 ## Home Page: 
-- Welcome message and brief introduction to the organization.
-- Featured pets available for adoption.
-- Call-to-action buttons for adoption, donation, volunteering, and appointment scheduling. 
+- Featured animals available for adoption.
+- Call-to-action buttons for adoption, adoption guide, F.A.Qs, contact us, and donation.
 
-## Adoptable Pets: 
-- Search and filter options (species, age, brief description, etc.).
+## Adoption Guide: 
+- Step-by-step guide to the adoption process:
+    i. choose an animal,
+    ii. review adoption fees, and
+    iii. complete adoption form.
+- Adoption fees fully explained.
+ 
+## Adoption Manager: 
+- Search and filter options (type of animal).
 - List of animals available for adoption.
-- Individual profiles for each pet with photos, descriptions, and adoption status. 
+- Individual profiles for each pet with photos, descriptions, and adoption button.
+- Adoption Form:
+    i. Confirmation of the selected pet
+    ii. Adoption form with fields: Name, Address, Credit Card Information.
+    iii. Successful adoption confirmation and the details.
 
-## Adoption: 
-- Step-by-step guide to the adoption process.
-- Application form and requirements.
-- Information on fees and what's included in the adoption. 
-
-## Education Center: 
-- Responsible pet ownership resources. 
-- Training tips and guides.
-- Breed information and characteristics.
-- Health and wellness articles. 
-
-## Appointment Management: 
-- ### Get an Appointment: 
-  - Introduction to the appointment process.
-  - Appointment request form with fields for name, contact information, address, preferred date and time, pet preference (if any), and additional comments.
-  - Submission confirmation with information on when the user can expect a response.
-- ### Reschedule Appointment:
-  - Introduction to the rescheduling process.
-  - Reschedule request form with fields for reference number or appointment details, proposed new date and time, reason for rescheduling, and additional comments.
-  - Submission confirmation with information on when the user can expect a response. 
-- ### Cancel Appointment: 
-  - Introduction to the cancellation process.
-  - Cancel appointment form with fields for reference number or appointment details and reason for cancellation.
-  - Submission confirmation with information on the cancellation process. 
-
-## About Us: 
-- Mission and vision statements.
-- History of the organization.
-- Meet the team (staff and volunteers).
-- Testimonials and success stories. 
-
-## Support Us: 
-- Donation options (one-time, recurring, in-kind).
-- Volunteer opportunities and application form.
-- Merchandise store if applicable. 
+## FAQs: 
+- Frequently asked questions about the adoption process, organization, and website usage.
 
 ## Contact Us: 
 - Contact form for general inquiries.
-- Information on how to visit the adoption center or contact specific departments.
-- Social media links. 
+    i. By calling.
+    ii. By visiting us at our address.
+    iii. By leaving a message on the form.
 
-## FAQs: 
-- Frequently asked questions about the adoption process, organization, and website usage. 
-- Privacy Policy and Terms of Service: 
-- Clear information on user data protection and terms governing website use. 
+## Support Us: 
+- Donation options ($5, $10, $20, $50 or another amount).
+- Donation methods (PayPal, Visa, Mastercard, American Express). 
 
-## Search and Accessibility: 
+## Search: 
 - Search bar for easy navigation. 
-- Accessibility features to ensure inclusivity.
+
+## Language Accessibility:
+- Website available in English and French.
