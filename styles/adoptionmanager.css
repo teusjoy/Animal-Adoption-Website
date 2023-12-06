@@ -99,6 +99,22 @@ background-size: 3em 3em;
 background-color: rgba(255, 255, 255, 1); /* Set background color with 80% opacity */
 }
 
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    width: 100%;
+    background-color: rgb(255, 241, 176);
+    bottom: 0;
+    left: 0;
+    font-size: medium;
+}
+
+.gtranslate_wrapper {
+    align-self: flex-end;
+}
+
 
 @media (max-width: 768px) {
     .main__content {

@@ -224,10 +224,22 @@ a:visited {
 }
 
 
-footer{
-    text-align: center;
-    color: white;
-    background-color: black;
+
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    width: 100%;
+    background-color: rgb(255, 241, 176);
+    bottom: 0;
+    left: 0;
+    font-size: medium;
+}
+
+.gtranslate_wrapper {
+    align-self: flex-end;
 }
 
 @media (max-width: 800px) {
