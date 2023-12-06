@@ -140,7 +140,7 @@ function generateNavbar() {
     let button = document.createElement("button");
     button.className = "btn btn-outline-success";
     button.textContent = "Search";
-    button.style = "margin-right: 200px;";
+    button.style = "margin-right: 5%;";
     
     // Put everything together
     
