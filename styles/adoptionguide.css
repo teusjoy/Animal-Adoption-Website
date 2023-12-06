@@ -190,6 +190,22 @@ background-color: rgba(255, 255, 255, 1); /* Set background color with 80% opaci
     font-size: 0.9em;
 }
 
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    width: 100%;
+    background-color: rgb(255, 241, 176);
+    bottom: 0;
+    left: 0;
+    font-size: medium;
+}
+
+.gtranslate_wrapper {
+    align-self: flex-end;
+}
+
 /* very small screens */
 @media screen and (max-width: 480px) {
     h1, h2, h3 {
