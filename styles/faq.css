@@ -204,6 +204,10 @@ footer {
     font-size: medium;
 }
 
+.responsive-iframe {
+    width: 100%;
+    border: none; 
+}
 
 .gtranslate_wrapper {
     align-self: flex-end;
