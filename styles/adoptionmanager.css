@@ -42,7 +42,7 @@ header {
     background-color: rgba(227, 236, 99, 0.432);
     padding: 40px;
     border-radius: 40px;
-    width:70%;
+    width:fit-content;
     align-content: center;
 }
 
