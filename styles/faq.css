@@ -1,10 +1,6 @@
 @import url("universal.css");
-/*This adds a padding for V1*/
-.my-5{
-    padding-top: var(--navbar-height);
-}
-/*This adds a padding for V2*/
-.mt-5{
+
+main{
     padding-top: var(--navbar-height);
 }
 
@@ -24,12 +20,15 @@ body{
     background: rgba(0, 0, 0, 0.5);
     z-index: 1000;
 }
-
+.top-text{
+    display: flex;
+    padding: 1rem;
+}
 .container{
     background-color: rgba(227, 236, 99, 0.432);
     padding: 40px;
     border-radius: 40px;
-    width:40%;
+    width:fit-content
 }
 
 body {
