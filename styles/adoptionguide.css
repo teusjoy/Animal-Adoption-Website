@@ -1,5 +1,8 @@
 @import url("universal.css");
 /*This adds a padding for V1*/
+main{
+    padding-top: var(--navbar-height);
+}
 .my-5{
     padding-top: var(--navbar-height);
 }
